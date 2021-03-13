@@ -12,14 +12,21 @@ class home extends StatelessWidget {
     );
   }
 }
+
 class Homea extends StatefulWidget {
   @override
   _Homea createState() => _Homea();
 }
 
 class _Homea extends State<Homea> {
- bool gambar2 = false;
- bool gambar3 = false;
+  int index = 0;
+  bool gambar2 = false;
+  bool gambar3 = false;
+
+  List<String> gambarDepan = ['images/Logo_18.jpeg', 'images/Logo1.png'];
+  List<String> gambarBelakang = ['images/Logo_18.jpeg', 'images/Logo1_2.png'];
+  List<String> deskripsiGambar = ['kelompok 4', 'kelompok 5'];
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -40,8 +47,8 @@ class _Homea extends State<Homea> {
                     width: 200.0,
                     height: 200.0,
                     child: MovingCardWidget(
-                      urlFront: gambar2  ?   "images/Logo_18.jpeg" : 'images/Logo1.png'  ,
-                      urlBack:  gambar2  ?  "images/Logo_18.jpeg" : 'images/Logo1_2.png'  ,
+                      urlFront: gambarDepan[index],
+                      urlBack: gambarBelakang[index],
                     ),
                   ),
                 ),
@@ -57,7 +64,7 @@ class _Homea extends State<Homea> {
                 ),
                 Text(
                   "KELOMPOK "
-                      "4",
+                  "4",
                   style: TextStyle(fontSize: 25.0, color: Colors.white),
                 ),
                 Divider(
@@ -69,14 +76,13 @@ class _Homea extends State<Homea> {
                       child: FlatButton(
                         onPressed: () {
                           setState(() {
-                            gambar2 = true;
+                            index = 0;
                           });
                         },
                         child: Container(
                           width: 60.0,
                           height: 60.0,
                           child: Image.asset("images/atas.png"),
-
                         ),
                       ),
                     ),
@@ -84,7 +90,7 @@ class _Homea extends State<Homea> {
                       child: FlatButton(
                         onPressed: () {
                           setState(() {
-                            gambar2 = false ;
+                            index = 1;
                           });
                         },
                         child: Container(
