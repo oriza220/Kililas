@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ililas_app/Widget/animated_card_widget.dart';
+import 'package:Kililas_app/Widget/animated_card_widget.dart';
 
 void main() => runApp(MaterialApp(
       home: home(),
@@ -116,7 +116,7 @@ class _Homea extends State<Homea> {
         ),
         body: Container(
           child: Padding(
-              padding: const EdgeInsets.fromLTRB(0.0, 30.0, 0.0, 0.0),
+              padding: const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 25.0),
               child: Column(
                 children: [
                   Center(
@@ -129,25 +129,22 @@ class _Homea extends State<Homea> {
                       ),
                     ),
                   ),
-                  Divider(
-                    height: 10.0,
-                  ),
-                  Text(
-                    namaKelompok[index],
-                    style: TextStyle(fontSize: 25.0, color: Colors.white),
-                  ),
-                  Divider(
-                    height: 2.0,
-                  ),
-                  Text(
-                    deskripsiGambar[index],
-                    style: TextStyle(fontSize: 25.0, color: Colors.white),
-                  ),
-                  Divider(
-                    height: 6.0,
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text(
+                      namaKelompok[index],
+                      style: TextStyle(fontFamily: ("Times New Roman") ,fontSize: 25.0, color: Colors.white),
+                    ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(6.0, 6.0, 6.0, 6.0),
+                    padding: const EdgeInsets.fromLTRB(3.0,3.0,3.0,24.0),
+                    child: Text(
+                      deskripsiGambar[index],
+                      style: TextStyle(fontFamily: ("Times New Roman") ,fontSize: 25.0, color: Colors.white),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
                     child: Row(
                       children: [
                         Container(
@@ -225,11 +222,8 @@ class _Homea extends State<Homea> {
                       ],
                     ),
                   ),
-                  Divider(
-                    height: 20.0,
-                  ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(6.0, 6.0, 6.0, 6.0),
+                    padding: const EdgeInsets.all(12.0),
                     child: Row(
                       children: [
                         Container(
@@ -303,11 +297,8 @@ class _Homea extends State<Homea> {
                       ],
                     ),
                   ),
-                  Divider(
-                    height: 5.0,
-                  ),
                   Padding(
-                    padding: const EdgeInsets.all(6.0),
+                    padding: const EdgeInsets.all(12.0),
                     child: Container(
                       child: FlatButton(
                         onPressed: () {
@@ -326,10 +317,14 @@ class _Homea extends State<Homea> {
                       ),
                     ),
                   ),
+                  Divider(
+                    height: 0.0,
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(6.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Container(
                           width: 60.0,
@@ -358,7 +353,9 @@ class _Homea extends State<Homea> {
                       ],
                     ),
                   ),
-
+                  Divider(
+                    height: 0.0,
+                  ),
                 ],
               )),
           decoration: BoxDecoration(

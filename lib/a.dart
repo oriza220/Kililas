@@ -1,4 +1,4 @@
-import 'package:ililas_app/Widget/animated_card_widget.dart';
+import 'package:Kililas_app/Widget/animated_card_widget.dart';
 import 'package:flutter/material.dart';
 
 
