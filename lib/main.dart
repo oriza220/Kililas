@@ -298,7 +298,7 @@ class _Homea extends State<Homea> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(12.0),
+                    padding: const EdgeInsets.all(13.0),
                     child: Container(
                       child: FlatButton(
                         onPressed: () {
